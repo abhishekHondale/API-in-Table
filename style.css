@@ -1,0 +1,48 @@
+body{
+    margin: 0%;
+    padding: 0%;
+    box-sizing: border-box;
+
+}
+#table{
+    background-color: rgb(113, 112, 113);
+}
+#tablerow{
+    background-color: rgb(213, 189, 35);
+    font-size: bold;
+    font-weight: 80px;
+}
+.tabledata{
+    /* background-color: rgb(46, 159, 122); */
+    font-size: 20px;
+    font-weight: bold;
+    
+}
+#button:hover{
+    background-color: rgb(174, 226, 43);
+}
+#id{
+    font-size: 20px;
+    font-weight: bold;
+}
+#login{
+    font-size: 20px;
+    font-weight:bold;
+}
+#price{
+    font-size: 30px;
+    font-weight:bold; 
+}
+#description{
+    font-size: 20px;
+    font-weight:bold;
+}
+#category{
+    font-size: 20px;
+    font-weight:bold;
+
+}
+#img{
+    border: 1px solid rgb(253, 253, 253);
+    background-color: none;
+}

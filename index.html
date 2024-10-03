@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="./style.css">
+</head>
+<body>
+    <div id="container">
+<table id="table">
+    <thead>
+<tr>
+    <td class="pd">ID</td>
+    <td class="pd">TITLE</td>
+    <td class="pd">IMAGE</td>
+    <td class="pd">PRICE</td>
+    <td class="pd">DESCRIPTION</td>
+    <td class="pd">CATEGORY</td>
+</tr>
+</thead>
+<tbody id="body">
+
+</tbody>
+</table>
+    </div>
+<script>
+    let details =document.getElementById('body')
+    let productdiv = document.getElementById('container')
+    let data=async()=>{
+        let product=await fetch('https://dummyjson.com/products')
+        let finaldata= await product.json()
+        
+        finaldata.products.forEach(({id,title,price,thumbnail,description,category}) => {
+            
+            details.innerHTML+=`<tr>
+            <td id="id">${id}</td>
+           <td id="login">${title}</td>
+           <td><img id="img" src="${thumbnail} " height="100" width="100"></td>
+           <td id="price">${price}</td>
+           <td id="description">${description}</td>
+           <td id="category">${category}</td>
+           </tr>`
+        });
+    }
+    data()
+</script>
+</body>
+</html>
